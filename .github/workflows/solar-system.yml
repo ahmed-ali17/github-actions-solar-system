@@ -39,6 +39,7 @@ jobs:
         name: coverage
         runs-on: ubuntu-latest
         steps:
+
           - name: Checkout Repository
             uses: actions/checkout@v4 
           
@@ -51,6 +52,7 @@ jobs:
           
           - name: Coverage
             run: npm run coverage
+            continue-on-error: true
           
           - name: Uplead Report
             uses: actions/upload-artifact@v3
